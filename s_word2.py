@@ -115,6 +115,8 @@ def load_data(filename):
             if line !='\n':
                 label_num, question = line.split("\t")
                 label, number = label_num.split("||#")
+                print label
+                print number, question
                 l1, l2 = label.split("-")
                 if l2 == '':
                     continue
@@ -137,7 +139,7 @@ def load_data(filename):
 def training():
     train = load_model('model2/train1.pkl')
     if train is None:
-        train = load_data('data/sum_ques.txt')
+        train = load_data('data/question2.txt')
     print "---------------------------"
     print "Training"
     print "---------------------------"
