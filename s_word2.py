@@ -115,8 +115,6 @@ def load_data(filename):
             if line !='\n':
                 label_num, question = line.split("\t")
                 label, number = label_num.split("||#")
-                print label
-                print number, question
                 l1, l2 = label.split("-")
                 if l2 == '':
                     continue
